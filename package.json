@@ -66,8 +66,6 @@
       "zalgolize": "^1.2.4",
       "ascii-data-table": "^2.1.1",
       "mysql": "^2.16.0"
-      "ytdl-core": "^0.21.1"
-      "request": "^2.88.0",
       "rebuild": "^0.1.2",
       "queue": "^4.4.2",
       "opusscript": "^0.0.6",
