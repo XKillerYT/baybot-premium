@@ -1230,50 +1230,6 @@ client.on("message", message => {
   })
   })
   }
-  });
-
-var con = mysql.createConnection({
-  host: 'localhost',
-  user: "root",
-  password: "ebrahim.2007", //باس وورد الما سكل حق
-  database: 'baybot' 
-});
-
-con.connect(e => {
-  if(e) return console.log(e);
-  console.log(`First SQL is Running`);
-});
-client.on('message', message =>{
-  if(message.author.bot) return
-
-let xpadd = Math.floor(Math.random() * (30 - 20 + 1));
-
-  con.query(`SELECT * FROM users_data WHERE userID = '${message.author.id}'
-  ORDER BY userXP`, (err , rows)=>{
-    if(err) return console.log(err);
-
-    if(!rows || !rows[0] || rows.length < 1){
-      con.query(`INSERT INTO users_data (userID , userXP) VALUES ('${message.author.id}', ${0})`);
-      console.log(`VALUES add to ${message.author.tag}`);
-    } else {
-      con.query(`UPDATE users_data SET userXP = ${Math.floor(rows[0].userXP + xpadd)} WHERE userID = '${message.author.id}'`); 
-    };
-  
-  })
-
-});
- 
-client.on('message', async message => {
-if(message.author.bot) return;
-if (message.channel.guild) {
-if (message.content === '-myV') {
-message.channel.send(`Your XP : ${voice[message.member.id].xp}
-Your Level : ${voice[message.member.id].level}`);
-      fs.writeFile('./voiceState.json', JSON.stringify(voice, null, 4), (e) => {
-        if(e) console.log(e);
-      });
-}}});
-
 
  
 
