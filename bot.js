@@ -16,15 +16,13 @@ const ytdl = require('ytdl-core');
 
 const gif = require("gif-search");
 
-const client = new Discord.Client({disableEveryone: true});
-
 const fs = require('fs');
 const moment = require('moment');
 const Canvas = require('canvas')
 const jimp = require('jimp')
 const mysql = require("mysql");
 const mmss = require('ms');
-const client = new Discord.Client();
+const client = new Discord.Client({disableEveryone: true});
 const ar = JSON.parse(fs.readFileSync(`AutoRole.json`, `utf8`))
 const voice = JSON.parse(fs.readFileSync("./voiceState.json", "utf8"));
 const temp = JSON.parse(fs.readFileSync('./temp.json', 'utf8'));
