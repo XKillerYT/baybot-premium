@@ -20,7 +20,6 @@ const fs = require('fs');
 const moment = require('moment');
 const Canvas = require('canvas')
 const jimp = require('jimp')
-const mysql = require("mysql");
 const mmss = require('ms');
 const client = new Discord.Client({disableEveryone: true});
 const ar = JSON.parse(fs.readFileSync(`AutoRole.json`, `utf8`))
